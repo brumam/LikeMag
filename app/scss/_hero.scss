@@ -1,0 +1,76 @@
+.hero{
+    background-color: $veryLightGray;
+    .container {
+        @include breakpoint-up(large){
+            display:flex;
+            align-items: center;
+        
+    }
+    }
+        
+  
+    
+    &__image{
+position: relative;
+background-image: url('/images/keyboard-5017973.jpg') ;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+min-height: 17.5rem;
+
+
+@include breakpoint-down(medium){
+    min-height: 18.75rem;
+    margin-top: -100px;
+    border-radius: 10px;
+}
+@include breakpoint-up(medium){
+    min-height: 17.5rem;
+
+    background-position: center 60%;
+}
+
+@include breakpoint-up(large){
+    flex:3; 
+    order:2;
+    height: 41rem;
+    background-image: none;
+    //background-image: url('/images/bg-intro-desktop.svg') ;
+    //background-position: left center;
+}
+
+
+&::before {
+   
+    @include breakpoint-up(large){
+        content: "";
+        position: absolute;
+        height: 98%;
+        background-image: url('/images/keyboard-5017973.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        width: 127%;
+        background-size: 150%;
+        background-position: 40% 100%;
+        border-radius: 20px 20px 20px 20px;
+    }
+   
+}
+
+
+
+    }
+    &__text{
+        text-align: center;
+        @include breakpoint-up(large){
+            flex:2; 
+            order:1;
+            text-align: left;
+
+        }
+       
+       
+       
+
+    }
+}

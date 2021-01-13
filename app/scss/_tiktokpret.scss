@@ -1,0 +1,67 @@
+.tiktokpret{
+    background-color: $veryLightGray;
+    .container {
+        @include breakpoint-up(large){
+            display:flex;
+            align-items: center;
+            margin-left: 2.5rem;
+    }
+    }
+    &__image{
+        position: relative;
+    background-image: url('/imagesproducts/icon-tiktok.svg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // min-height: 17.5rem;
+        @include breakpoint-down(medium){
+            margin-top: -1.875rem;
+            position: block;
+            border-radius: 0.625rem;
+            min-height: 22.8125rem;
+            background-position: unset;
+        }
+        @include breakpoint-up(medium){
+            min-height: 16rem;
+        
+            background-position: center 60%;
+        }
+        
+        @include breakpoint-up(large){
+            flex:3; 
+            order:2;
+            // height: 41rem;
+            background-image: none;
+            //background-image: url('/images/bg-intro-desktop.svg') ;
+            //background-position: left center;
+        }
+        
+        
+        &::before {
+           
+            @include breakpoint-up(large){
+                content: "";
+                position: absolute;
+                height: 100%;
+                background-image: url(/imagesproducts/icon-tiktok.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 90%;
+                background-size: 30%;
+                
+            }
+           
+        }
+        
+        
+    }
+    &__text{
+        text-align: center;
+        @include breakpoint-up(large){
+            flex:2; 
+            order:1;
+            text-align: left;
+
+        }
+    }
+}

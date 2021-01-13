@@ -1,0 +1,179 @@
+.contact{
+
+    .background-img{
+        
+            background: url("/images/pexels-contact1920.jpg") no-repeat center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            
+    }
+    .video {
+        min-width: 100%;
+        max-height: 720px;
+        overflow: hidden;    position: relative;
+        text-align: center;
+    
+    }
+    .video img {
+        min-width: 100%;
+        min-height: 100%;
+    
+    }
+    .video .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        padding-top: 80px;
+         background-color: rgba(0, 32, 60, 0.44);
+         @include breakpoint-up(medium){
+             padding-top: 50px;
+         }
+    }
+    .video .overlay h2 {
+      text-transform: none;
+      font-size: 2.1875rem;
+
+      
+      color: #fff ;
+      @include breakpoint-up(large){
+        text-align: left;
+        margin-top: 2.1875rem;
+        padding-left: 6.5rem;
+      }
+    }
+    .video .overlay p {
+        color: #fff !important;
+        @include breakpoint-down(medium){
+            text-align: left;
+            transform:translate(3%);
+        }
+        @include breakpoint-up(large){
+            text-align: left;
+            margin-bottom: 6.25rem;
+            padding-left: 6.875rem;
+        }
+        
+    }
+    
+ 
+   
+    .video .overlay form {
+        width: 80%;
+        margin: 3.75rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    .video .overlay form input {
+        height: 2.1875rem;
+        background-color: transparent;
+        padding: 5px 0px;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1.875rem;
+      color: #fff;
+    }
+    .video .overlay form textarea {
+        background-color: transparent;
+        padding: 5px 0px;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1.875rem;
+        height: 2.5rem;
+        width: 100%;
+      color: #fff;
+    }
+    .video .overlay form input:focus,.video .overlay form textarea:focus {
+        border-bottom-color: #0b8ffe;
+        box-shadow: 0px 0px 20px rgba(11, 143, 254, 0.42);
+    }
+    .video .overlay form input::-webkit-input-placeholder,
+    .video .overlay form textarea::-webkit-input-placeholder {
+        color: #e8e8e8;
+        text-transform: capitalize;
+    }
+    .video .overlay form [name="name"],
+    .video .overlay form [name="email"],
+    .video .overlay form [name="phone"] {
+        width: 31%;
+    }
+    .video .overlay form [name="website"],
+    .video .overlay form [name="subject"] {
+        width: 48%;
+        margin-bottom: 5rem;
+    }
+    .video .overlay form button {
+        background-color: transparent;
+        padding: 10px 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        color: #fff;
+        text-transform: uppercase;
+        transition: 1s ease;
+        overflow: hidden;
+        
+    }
+    .video .overlay form button:hover {
+        color: #0b8ffe;
+        border-color: #0b8ffe;
+        box-shadow: 0 0 20px #0b8ffe;
+      cursor: pointer
+    }
+    .video .overlay form button:hover div {
+       /* transform: rotate(-422deg) scale(1.5, 1.5) translate(50%, 50px);*/
+        transform: scale(2) translateX(200px);
+        transition: 1s ease-in-out;
+        color: transparent;
+    }
+    /* ----------- start media query for video & contact ----*/
+    @media only screen and (max-width: 575px) {
+        .video .overlay {
+            padding-top: 0px;
+        }
+        
+       
+        .video .overlay form {
+            width: 84%;
+            margin: 40px auto 0;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video .overlay form input {
+            width: 95% !important;
+            margin-bottom: 0.9375rem !important;
+        }
+        .video .overlay form textarea {
+            width: 95%;
+            margin-top: 0.9375rem;
+        }
+        .video .overlay form button {
+            width: 95%;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 991px) {
+        
+        .video .overlay form {
+            width: 90%;
+            margin: 60px auto 0;
+        }
+        .video .overlay form [name="name"],
+        .video .overlay form [name="email"] {
+            width: 48%;
+        }
+        .video .overlay form [name="phone"],
+        .video .overlay form [name="website"] {
+            width: 48%;
+            margin-bottom: 1.875rem;
+        }
+        .video .overlay form [name="subject"] {
+            width: 100%;
+        }
+        
+    }
+ 
+    
+}

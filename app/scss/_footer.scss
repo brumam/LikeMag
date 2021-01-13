@@ -1,0 +1,79 @@
+.footer { 
+    background-color: $darkBlue;
+    color: $white;
+    padding: 1.25rem;
+    text-align: center;
+    @include breakpoint-up (large){
+        
+        display:grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+         "logo  cta"
+         "social  copyright";
+         justify-items: start;
+    }     
+    a {
+        color:$white;
+    }
+    &__logo {
+    display: inline-block;
+
+      @include breakpoint-down(medium){
+          margin-bottom: 1.875rem;
+      }
+    @include breakpoint-up(large){
+        grid-area: logo;
+       
+    }
+    }
+    &__social{
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }
+     
+        a{
+            display: inline-block;
+            height: 1.25rem;
+            svg path{
+                transition: fill 150ms ease-in-out;
+            }
+            &:hover svg path{
+                fill: $limeGreen;
+            }
+        }
+        
+        a:not(:last-child){
+            margin-right: 1rem;
+        }
+        
+        @include breakpoint-up(large){
+            grid-area: social;
+            align-self:end;
+            
+        }
+    }
+    
+    &__cta{
+        a.button{
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            }
+           
+        }
+        @include breakpoint-up(large){
+            grid-area: cta;
+            justify-self: center;
+            text-align: start;
+        }
+    }
+    &__copyright{
+        font-size: 0.9375rem ;
+        @include breakpoint-up(large){
+            grid-area: copyright;
+            align-self: center;
+            justify-self: stretch;
+
+        }
+    }
+}
